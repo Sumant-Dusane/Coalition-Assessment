@@ -2,9 +2,10 @@
 @import "./../../assets/styles/flex";
 
 .footer {
+    display: block;
     @include flex(column, center, center);
     background-color: $textPrimary;
-    padding: $spacer;    
+    padding: $spacer;
 
     p {
         opacity: 0.25;
