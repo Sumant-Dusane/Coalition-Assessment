@@ -1,0 +1,21 @@
+@import "./../../assets/styles/variables";
+@import "./../../assets/styles/flex";
+@import "./../../assets/styles/sudo";
+
+.navbar {
+    @include element-position(absolute, 0, 0, unset, 0);
+    @include flex(row, center, space-around);
+    max-height: 80px;
+    color: $white;
+    background-color: transparent;    
+    &__nav {
+        @include flex(row, center, center);
+        gap: $spacer3x;
+        list-style: decimal-leading-zero;
+        text-decoration: underline;
+        
+        a {
+            color: $white;
+        }
+    }
+}

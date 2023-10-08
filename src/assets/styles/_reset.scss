@@ -1,0 +1,39 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    z-index: -1;
+    pointer-events: none;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+}
+
+body {
+    font-family: $font-family-primary;
+    color: $textPrimary;
+    background-color: $white;
+    font-size: $font-size-base;
+
+    @media screen and (min-width: 426px){
+        font-size: $font-size-sm;
+    }
+}
+
+a {
+    color: $textPrimary;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    transition: $transition-in-out;
+}

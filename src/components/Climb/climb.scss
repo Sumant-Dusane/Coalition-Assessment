@@ -1,0 +1,109 @@
+@import "./../../assets/styles/variables";
+@import "./../../assets/styles/flex";
+@import "./../../assets/styles/sudo";
+
+.climb {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    &__content {
+        padding-top: 220px;
+
+        &__tab {
+            padding: 0 $spacer;
+            background-color: $textPrimary;
+            button {
+                font-weight: bold;
+                padding: $spacer1_2;
+                color: transparentize($color: $white, $amount: 0.5);
+                text-transform: uppercase;
+                font-size: $font-size-sm;
+
+                &.selected, &:hover {
+                    background-color: transparentize($color: $white, $amount: 0.5);
+                    color: $textPrimary;
+                }
+            }
+        }
+
+        &__main {
+            .tab {
+                position: relative;
+                height: 73vh;
+                &--1 {
+                    background: url('./../../assets/images/tab-1.png') no-repeat center center;
+                    background-size: cover;
+                }
+                &--2 {
+                    background: url('./../../assets/images/tab-2.png') no-repeat center center;
+                    background-size: cover;
+                }
+                .card {
+                    @include element-position(absolute, 15%, 16px, unset, 16px);
+                    background-color: transparentize($color: $white, $amount: 0.35);
+                    padding: $spacer;
+
+                    &__title {
+                        font-size: $font-size-xl;
+                    }
+
+                    table {
+                        min-width: 300px;
+                        font-weight: 200;
+                        letter-spacing: 1px;
+
+                        td {
+                            padding: $spacer1_4 $spacer1_2;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media screen and (min-width: 426px){
+        .text__block {
+            top: 0;
+            &__wrapper {
+                width: 50%;
+                height: 190px;
+
+                span {
+                    top: -32px;
+                    bottom: 0;
+                    font-size: 10rem;
+                }
+                h1 {
+                    top: 35%;
+                    left: 20%;
+                }
+                p {
+                    top: 38%;
+                    left: 35%;
+                }
+            }
+        }
+
+        &__content {
+            padding-top: 190px;
+            &__tab {
+                padding: 0 25%;
+                button {
+                    padding: $spacer2x;
+                    font-size: $font-size-l;
+                }
+            }
+            &__main {
+                .tab {
+                    .card {
+                        right: unset;
+                        left: 25%;
+                        width: max-content;
+                    }
+                }
+            }
+        }
+    }
+}

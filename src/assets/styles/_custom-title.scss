@@ -1,0 +1,82 @@
+// .head__block {
+//     @include element-position(absolute, 0, 16px, unset, 16px);
+
+//     span {
+//         font-size: 80px;
+//         opacity: 0.5;
+//         font-weight: bold;
+//     }
+
+//     &__title {
+//         @include element-position(absolute, 15px, 16px, unset, 22%);
+//         p {
+//             margin-left: -#{$spacer4x};
+//         }
+//     }
+
+//     @media screen and (min-width: 426px){
+//         left: 25%;
+//         right: 25%;
+//         top: -50px;
+//         span {
+//             font-size: 220px;
+//         }
+
+//         &__title {
+//             top: 150px;
+//             right: unset;
+//             left: 24%;
+//             p {
+//                 margin-top: $spacer4x;
+//             }
+//         }
+//     }
+// }
+
+.text__block {
+    @include element-position(absolute, 35px, 0, unset, 0);
+    @include flex(row, center, center);
+    width: 100%;
+
+    &__wrapper {
+        position: relative;
+        overflow: hidden;
+        height: 300px;
+        width: 350px;
+
+        span {
+            @include element-position(absolute, 0, unset, unset, 0);
+            opacity: 0.5;
+            font-weight: bold;
+            font-size: 5rem;
+        }
+        h1 {
+            @include element-position(absolute, 16px, unset, unset, 22%);
+        }
+        p {
+            @include element-position(absolute, 92px, unset, unset, 51px);
+            font-size: $font-size-s;
+        }
+    }
+
+    @media screen and (min-width: 729px){
+
+        &__wrapper {
+            width: 500px;
+            span {
+                top: -30px;
+                font-size: 10rem;
+                right: unset;
+            }
+            h1 {
+                top: 24%;
+                left: 31%;
+            }
+            p {
+                top: 158px;
+                left: 22%;
+                font-size: $font-size-sm;
+            }
+        }
+    }
+}
