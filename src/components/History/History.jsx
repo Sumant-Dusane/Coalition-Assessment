@@ -1,6 +1,7 @@
 import React from 'react';
 import "./history.scss";
 import Slider from '../Slider/Slider';
+import SliderNew from '../SliderNew/SliderNew';
 
 export default function History() {
   return (
@@ -13,7 +14,10 @@ export default function History() {
         </div>
       </div>
       <div className="history__carousel">
-        {/* <Slider /> */}
+        <div className="wrapper">
+          {/* <Slider /> */}
+          <SliderNew />
+        </div>
       </div>
     </div>
   )

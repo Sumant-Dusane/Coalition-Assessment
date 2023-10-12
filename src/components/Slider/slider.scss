@@ -1,0 +1,49 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/flex";
+
+.slider {
+    &__indicator {
+        @include flex(row, center, center);
+        gap: $spacer1_2;
+        margin-top: $spacer1_2;
+
+        button {
+            background-color: transparentize($color: $white, $amount: 0.45);
+            width: 7px;
+            height: 7px;
+            border-radius: $border-radius-round;
+            padding: 0;
+
+            &.selected, &:hover {
+                background-color: $white;
+            }
+        }
+    }
+}
+
+.carousel {
+    position: relative;
+    height: 100%;
+    @include flex(row, flex-start, flex-start);
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    gap: $spacer;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &__slide {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        gap: $spacer1_2;
+        height: 100%;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

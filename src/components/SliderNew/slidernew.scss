@@ -1,0 +1,22 @@
+@import "../../assets/styles/variables";
+
+.slider {
+    height: 100%; 
+
+    .slick-slider {
+        .slick-list  .slick-slide > div {
+            margin: 0 $spacer;
+        }
+        .slick-dots {
+            position: relative;
+            bottom: unset;
+            z-index: 1;
+            li {
+                button::before {
+                   color: $white; 
+                }
+            }
+        }
+    }
+
+}
